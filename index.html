@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suites LM - Hotel de Lujo en Jilotepec</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-background {
+            /* Using a placeholder image for the hero section */
+            background-image: url('https://placehold.co/1920x1080/4CAF50/FFFFFF?text=Suites+LM+Hotel');
+            background-size: cover;
+            background-position: center;
+        }
+        .suite-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .suite-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Custom button styling */
+        .btn-primary {
+            background-color: #A0522D; /* Sienna-like color */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #8B4513; /* Darker Sienna */
+        }
+        .btn-secondary {
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn-secondary:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4 fixed w-full z-10">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-gray-900">Suites LM</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#inicio" class="text-gray-700 hover:text-gray-900 font-semibold">Inicio</a></li>
+                <li><a href="#suites" class="text-gray-700 hover:text-gray-900 font-semibold">Suites</a></li>
+                <li><a href="#encontrar-suite" class="text-gray-700 hover:text-gray-900 font-semibold">Encuentra tu Suite Ideal ✨</a></li>
+                <li><a href="#servicios" class="text-gray-700 hover:text-gray-900 font-semibold">Servicios</a></li>
+                <li><a href="#galeria" class="text-gray-700 hover:text-gray-900 font-semibold">Galería</a></li>
+                <li><a href="#sobre-nosotros" class="text-gray-700 hover:text-gray-900 font-semibold">Sobre Nosotros</a></li>
+                <li><a href="#faqs" class="text-gray-700 hover:text-gray-900 font-semibold">FAQs</a></li>
+                <li><a href="#contacto" class="text-gray-700 hover:text-gray-900 font-semibold">Contacto</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-lg">
+            <ul class="flex flex-col items-center space-y-2">
+                <li><a href="#inicio" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">Inicio</a></li>
+                <li><a href="#suites" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">Suites</a></li>
+                <li><a href="#encontrar-suite" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">Encuentra tu Suite Ideal ✨</a></li>
+                <li><a href="#servicios" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">Servicios</a></li>
+                <li><a href="#galeria" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">Galería</a></li>
+                <li><a href="#sobre-nosotros" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">Sobre Nosotros</a></li>
+                <li><a href="#faqs" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">FAQs</a></li>
+                <li><a href="#contacto" class="block py-2 text-gray-700 hover:text-gray-900 font-semibold">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-background h-screen flex items-center justify-center text-center text-white pt-16">
+        <div class="bg-black bg-opacity-50 p-8 rounded-lg max-w-3xl mx-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">Suites LM</h1>
+            <p class="text-xl md:text-2xl mb-8">La mejor opción para viajes de trabajo en Jilotepec</p>
+            <a href="#suites" class="btn-primary text-lg font-bold">Explorar Suites</a>
+        </div>
+    </section>
+
+    <!-- Suites Section -->
+    <section id="suites" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Nuestras Exclusivas Suites</h2>
+
+            <!-- Suite Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Minimalista Ejecutivo Suite -->
+                <div class="suite-card bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/600x400/D4AF37/000000?text=Suite+Minimalista+Ejecutivo" alt="Suite Minimalista Ejecutivo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Suite Minimalista Ejecutivo</h3>
+                        <p class="text-gray-700 mb-4">Diseño moderno y funcional, ideal para el viajero de negocios o una escapada tranquila.</p>
+                        <ul class="text-gray-600 text-sm mb-4 list-disc list-inside">
+                            <li>1 Cama King Size</li>
+                            <li>1 Sofá Cama Individual</li>
+                            <li>2 Pantallas LED 55"</li>
+                            <li>1 WC + 1 Regadera</li>
+                            <li>Conexión WiFi y Área Ejecutiva</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-bold text-gray-900">$1,300<span class="text-lg font-normal">/noche</span></span>
+                            <button class="btn-primary text-sm">Reservar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Minimalista Ejecutivo Suite -->
+                <div class="suite-card bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/600x400/D4AF37/000000?text=Suite+Minimalista+Ejecutivo" alt="Suite Minimalista Ejecutivo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Suite Minimalista Ejecutivo</h3>
+                        <p class="text-gray-700 mb-4">Diseño moderno y funcional, ideal para el viajero de negocios o una escapada tranquila.</p>
+                        <ul class="text-gray-600 text-sm mb-4 list-disc list-inside">
+                            <li>1 Cama King Size</li>
+                            <li>1 Sofá Cama Individual</li>
+                            <li>2 Pantallas LED 55"</li>
+                            <li>1 WC + 1 Regadera</li>
+                            <li>Conexión WiFi y Área Ejecutiva</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-bold text-gray-900">$1,300<span class="text-lg font-normal">/noche</span></span>
+                            <button class="btn-primary text-sm">Reservar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Rústica Suite -->
+                <div class="suite-card bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Suite+Rustica" alt="Suite Rústica" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Suite Rústica</h3>
+                        <p class="text-gray-700 mb-4">Un ambiente cálido y acogedor con toques tradicionales, perfecto para relajarse.</p>
+                        <ul class="text-gray-600 text-sm mb-4 list-disc list-inside">
+                            <li>1 Cama King Size</li>
+                            <li>1 Sofá Cama Individual</li>
+                            <li>2 Pantallas LED 55"</li>
+                            <li>1 WC + 1 Regadera</li>
+                            <li>Conexión WiFi y Área Ejecutiva</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-bold text-gray-900">$1,300<span class="text-lg font-normal">/noche</span></span>
+                            <button class="btn-primary text-sm">Reservar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Minimalista Ejecutiva Suite -->
+                <div class="suite-card bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/600x400/A9A9A9/000000?text=Suite+Minimalista+Ejecutiva" alt="Suite Minimalista Ejecutiva" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Suite Minimalista Ejecutiva</h3>
+                        <p class="text-gray-700 mb-4">Elegancia minimalista con todas las comodidades para una estancia productiva y placentera.</p>
+                        <ul class="text-gray-600 text-sm mb-4 list-disc list-inside">
+                            <li>1 Cama King Size</li>
+                            <li>1 Sofá Cama Individual</li>
+                            <li>2 Pantallas LED 55"</li>
+                            <li>1 WC + 1 Regadera</li>
+                            <li>Conexión WiFi y Área Ejecutiva</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-bold text-gray-900">$1,300<span class="text-lg font-normal">/noche</span></span>
+                            <button class="btn-primary text-sm">Reservar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Minimalista Doble para Familias Suite -->
+                <div class="suite-card bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                    <img src="https://placehold.co/600x400/6A5ACD/FFFFFF?text=Suite+Familiar" alt="Suite Minimalista Doble para Familias" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Suite Minimalista Doble para Familias</h3>
+                        <p class="text-gray-700 mb-4">Espaciosa y cómoda, perfecta para familias que buscan una estancia relajante.</p>
+                        <ul class="text-gray-600 text-sm mb-4 list-disc list-inside">
+                            <li>2 Habitaciones</li>
+                            <li>2 Camas King Size</li>
+                            <li>Sala completa con TV</li>
+                            <li>Cocina completa: Refrigerador, Estufa, Fregadero, Microondas, Cafetera, Muebles de cocina</li>
+                            <li>Comedor con 4 sillas</li>
+                            <li>2 Baños</li>
+                            <li>1 Sofá Cama</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-bold text-gray-900">$3,200<span class="text-lg font-normal">/noche</span></span>
+                            <button class="btn-primary text-sm">Reservar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Rates Section -->
+            <div class="mt-16 text-center bg-gray-50 p-8 rounded-lg shadow-md border border-gray-200">
+                <h3 class="text-3xl font-bold mb-6 text-gray-900">Estancias Mensuales</h3>
+                <p class="text-lg text-gray-700 mb-4">Ofrecemos tarifas especiales para estancias prolongadas:</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="bg-white p-6 rounded-lg shadow-inner border border-gray-300 w-full md:w-auto">
+                        <p class="text-xl font-semibold text-gray-800">Habitaciones 1-3:</p>
+                        <p class="text-4xl font-bold text-gray-900">$12,000<span class="text-lg font-normal">/mes</span></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-inner border border-gray-300 w-full md:w-auto">
+                        <p class="text-xl font-semibold text-gray-800">Habitación 4:</p>
+                        <p class="text-4xl font-bold text-gray-900">$15,000<span class="text-lg font-normal">/mes</span></p>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-6 text-sm">Contáctenos para más detalles sobre nuestras estancias mensuales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Your Ideal Suite Section (Gemini API Integration) -->
+    <section id="encontrar-suite" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Encuentra tu Suite Ideal ✨</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto border border-gray-200">
+                <p class="text-lg text-gray-700 mb-6 text-center">Cuéntanos sobre tu viaje y te ayudaremos a encontrar la suite perfecta para ti.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="adults" class="block text-gray-700 text-sm font-bold mb-2">Número de Adultos:</label>
+                        <input type="number" id="adults" value="1" min="1" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="children" class="block text-gray-700 text-sm font-bold mb-2">Número de Niños:</label>
+                        <input type="number" id="children" value="0" min="0" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="purpose" class="block text-gray-700 text-sm font-bold mb-2">Propósito de la Estancia:</label>
+                    <select id="purpose" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="negocios">Viaje de Negocios</option>
+                        <option value="vacaciones en familia">Vacaciones en Familia</option>
+                        <option value="escapada romantica">Escapada Romántica</option>
+                        <option value="estancia larga">Estancia Larga</option>
+                        <option value="relajacion">Relajación</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Amenidades:</label>
+                    <div class="flex flex-wrap gap-4 text-gray-700">
+                        <span class="mr-4">Escritorio</span>
+                        <span class="mr-4">Frigobar</span>
+                        <span class="mr-4">Comedor</span>
+                        <span class="mr-4">Sofá Cama</span>
+                    </div>
+                </div>
+
+                <button id="recommend-suite-button" class="btn-secondary w-full text-lg font-bold py-3">
+                    Obtener Recomendación ✨
+                </button>
+
+                <div id="recommendation-result" class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-300 hidden">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Nuestra Recomendación:</h3>
+                    <p id="recommendation-text" class="text-gray-700"></p>
+                    <div id="loading-indicator" class="hidden text-center mt-4">
+                        <i class="fas fa-spinner fa-spin text-A0522D text-2xl"></i>
+                        <p class="text-gray-600">Buscando la suite ideal...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services and Amenities Section -->
+    <section id="servicios" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Servicios y Amenidades</h2>
+
+            <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                <h3 class="text-3xl font-semibold mb-6 text-gray-900">Servicios Disponibles</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-bed text-xl text-A0522D"></i>
+                        <span>1 Cama King Size</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-couch text-xl text-A0522D"></i>
+                        <span>1 Sofá Cama Individual</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-tv text-xl text-A0522D"></i>
+                        <span>2 Pantallas LED 55"</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-shower text-xl text-A0522D"></i>
+                        <span>1 WC + 1 Regadera</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-clock text-xl text-A0522D"></i>
+                        <span>Auto - Check in / 2 pm</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-clock text-xl text-A0522D"></i>
+                        <span>Check out 11 am</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-money-bill-wave text-xl text-A0522D"></i>
+                        <span>Pagos: Efectivo, Transferencia, Tarjeta</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-refrigerator text-xl text-A0522D"></i>
+                        <span>Frigobar</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-utensils text-xl text-A0522D"></i>
+                        <span>Comedor para 2 personas</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-chair text-xl text-A0522D"></i>
+                        <span>Sala con 2 asientos</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-car text-xl text-A0522D"></i>
+                        <span>1 Cajón estacionamiento</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-bread-slice text-xl text-A0522D"></i>
+                        <span>Tostador eléctrico</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-mug-hot text-xl text-A0522D"></i>
+                        <span>Tetera eléctrica</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-coffee text-xl text-A0522D"></i>
+                        <span>Cafetera</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-shirt text-xl text-A0522D"></i>
+                        <span>Plancha</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-wifi text-xl text-A0522D"></i>
+                        <span>Conexión WiFi</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-briefcase text-xl text-A0522D"></i>
+                        <span>Área Ejecutiva</span>
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-semibold mt-10 mb-6 text-gray-900">Amenidades Adicionales</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-cup-hot text-xl text-A0522D"></i>
+                        <span>Cortesía de té y café</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-bottle-water text-xl text-A0522D"></i>
+                        <span>2 Botellas de agua</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-first-aid text-xl text-A0522D"></i>
+                        <span>Kit de primeros auxilios</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-toiletries text-xl text-A0522D"></i>
+                        <span>Accesorios de aseo personal (Shampoo, acondicionador, crema y jabón)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Galería de Imágenes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Placeholder Images for Gallery -->
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/957DAD/FFFFFF?text=Imagen+1" alt="Imagen de la Galería 1" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/D291BC/000000?text=Imagen+2" alt="Imagen de la Galería 2" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/FFC72C/000000?text=Imagen+3" alt="Imagen de la Galería 3" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/A0522D/FFFFFF?text=Imagen+4" alt="Imagen de la Galería 4" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Imagen+5" alt="Imagen de la Galería 5" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/E0BBE4/000000?text=Imagen+6" alt="Imagen de la Galería 6" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/6A5ACD/FFFFFF?text=Imagen+7" alt="Imagen de la Galería 7" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/4CAF50/FFFFFF?text=Imagen+8" alt="Imagen de la Galería 8" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/A9A9A9/000000?text=Imagen+9" alt="Imagen de la Galería 9" class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/D4AF37/000000?text=Imagen+10" alt="Imagen de la Galería 10" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="sobre-nosotros" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900">Sobre Suites LM</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                En Suites LM te esperamos con habitaciones cómodas, wifi veloz, estacionamiento privado y una ubicación perfecta:
+                Ya sea que vengas por negocio, a visitar a la familia o simplemente a desconectarte... aquí tienes tu lugar en Jilotepec de Molina Enriquez.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Preguntas Frecuentes</h2>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">¿Cuál es el horario de check-in y check-out?</h3>
+                    <p class="text-gray-700">El check-in es a partir de las 2:00 PM y el check-out es a las 11:00 AM. Ofrecemos check-in automático para su comodidad.</p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">¿Qué métodos de pago aceptan?</h3>
+                    <p class="text-gray-700">Aceptamos pagos en efectivo, transferencias bancarias y pagos con tarjeta de crédito/débito.</p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">¿Las suites incluyen Wi-Fi?</h3>
+                    <p class="text-gray-700">Sí, todas nuestras suites cuentan con conexión Wi-Fi de alta velocidad y un área ejecutiva para trabajar cómodamente.</p>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">¿Hay estacionamiento disponible?</h3>
+                    <p class="text-gray-700">Sí, cada suite incluye un cajón de estacionamiento privado.</p>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="mb-6 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">¿Ofrecen tarifas para estancias largas?</h3>
+                    <p class="text-gray-700">Sí, tenemos tarifas mensuales especiales. Por favor, consulte la sección de Suites o contáctenos directamente para más detalles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900">Contáctenos</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto border border-gray-200">
+                <p class="text-lg text-gray-700 mb-4">Estamos ubicados en el corazón de Jilotepec de Molina Enriquez.</p>
+                <p class="text-xl font-semibold text-gray-900 mb-2">Dirección:</p>
+                <p class="text-lg text-gray-700 mb-4">Avenida Vicente Guerrero Ote. 159 B, Col. Centro, C.P. 54240, Jilotepec de Molina Enriquez.</p>
+                <p class="text-xl font-semibold text-gray-900 mb-2">Teléfono:</p>
+                <p class="text-lg text-gray-700 mb-4">
+                    <a href="tel:+525623324626" class="text-blue-600 hover:underline">5623324626</a>
+                </p>
+                <p class="text-xl font-semibold text-gray-900 mb-2">Correo Electrónico:</p>
+                <p class="text-lg text-gray-700 mb-6">
+                    <a href="mailto:hotelsuiteslm@gmail.com" class="text-blue-600 hover:underline">hotelsuiteslm@gmail.com</a>
+                </p>
+
+                <!-- Google Maps Embed (placeholder) -->
+                <div class="w-full h-80 bg-gray-200 rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15000.0!2d-99.55!3d19.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2639b2e0c01d3%3A0x47e1d5e0a0d0e1b!2sJilotepec%20de%20Molina%20Enr%C3%ADquez%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1678901234567!5m2!1ses!2smx"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p class="text-gray-600 mt-4 text-sm">Escanee el código QR en la imagen de amenidades para la ubicación exacta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Suites LM. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Gemini API Integration for Suite Recommendation
+        document.getElementById('recommend-suite-button').addEventListener('click', async () => {
+            const adults = document.getElementById('adults').value;
+            const children = document.getElementById('children').value;
+            const purpose = document = document.getElementById('purpose').value;
+            // For amenities, since they are now just text, we'll get their values directly for the prompt
+            const amenitiesElements = document.querySelectorAll('#encontrar-suite .flex.flex-wrap.gap-4 span');
+            const desiredAmenities = Array.from(amenitiesElements).map(span => span.textContent.trim()).join(', ');
+
+
+            const recommendationResultDiv = document.getElementById('recommendation-result');
+            const recommendationTextP = document.getElementById('recommendation-text');
+            const loadingIndicator = document.getElementById('loading-indicator');
+
+            // Show loading indicator and hide previous result
+            recommendationResultDiv.classList.remove('hidden');
+            recommendationTextP.textContent = '';
+            loadingIndicator.classList.remove('hidden');
+
+            const prompt = `El usuario busca una suite en nuestro hotel con las siguientes características:
+Número de adultos: ${adults}
+Número de niños: ${children}
+Propósito de la estancia: ${purpose}
+Amenidades deseadas: ${desiredAmenities || 'ninguna especificada'}
+
+Nuestro hotel tiene las siguientes suites con sus precios por noche:
+1. Minimalista Ejecutivo ($1,300): 1 Cama King Size, 1 Sofá Cama Individual, 2 Pantallas LED 55", 1 WC + 1 Regadera, Conexión WiFi y Área Ejecutiva. Ideal para negocios o escapada tranquila.
+2. Minimalista Ejecutivo ($1,300): 1 Cama King Size, 1 Sofá Cama Individual, 2 Pantallas LED 55", 1 WC + 1 Regadera, Conexión WiFi y Área Ejecutiva. Diseño moderno y funcional, ideal para el viajero de negocios o una escapada tranquila.
+3. Rústica ($1,300): 1 Cama King Size, 1 Sofá Cama Individual, 2 Pantallas LED 55", 1 WC + 1 Regadera, Conexión WiFi y Área Ejecutiva. Ambiente cálido y acogedor.
+4. Minimalista Ejecutiva ($1,300): 1 Cama King Size, 1 Sofá Cama Individual, 2 Pantallas LED 55", 1 WC + 1 Regadera, Conexión WiFi y Área Ejecutiva. Elegancia minimalista.
+5. Minimalista Doble para Familias ($3,200): 2 Habitaciones, 2 Camas King Size, Sala completa con TV, Cocina completa: Refrigerador, Estufa, Fregadero, Microondas, Cafetera, Muebles de cocina. Comedor con 4 sillas, 2 Baños, 1 Sofá Cama. Perfecta para familias.
+
+Basado en las preferencias del usuario, sugiere la suite más adecuada y explica brevemente por qué. Si ninguna suite encaja perfectamente, sugiere la mejor opción disponible. Responde solo con la recomendación de la suite y una breve justificación.`;
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // If you want to use models other than gemini-2.0-flash or imagen-3.0-generate-002, provide an API key here. Otherwise, leave this as-is.
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    recommendationTextP.textContent = text;
+                } else {
+                    recommendationTextP.textContent = 'Lo sentimos, no pudimos generar una recomendación en este momento. Por favor, inténtelo de nuevo más tarde.';
+                }
+            } catch (error) {
+                console.error('Error al llamar a la API de Gemini:', error);
+                recommendationTextP.textContent = 'Ocurrió un error al obtener la recomendación. Por favor, inténtelo de nuevo.';
+            } finally {
+                loadingIndicator.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
